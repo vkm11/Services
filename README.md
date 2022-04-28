@@ -1,3 +1,18 @@
+## PRINCIPLES:-
+-Do not repeat yourself(DRY)
+-single Responsibility principle
+
+
+## SERVICE-17:-
+
+	A class with a specific purpose.
+	
+	1) Share data
+	2) Implement application logic
+	3) External Interaction
+	
+	Naming convention-.service.ts
+
 # Services
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
