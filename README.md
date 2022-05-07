@@ -1,3 +1,116 @@
+## PRINCIPLES:-
+-Do not repeat yourself(DRY)
+-single Responsibility principle
+
+
+## SERVICE  v-17:-
+
+	A class with a specific purpose.
+	
+	1) Share data
+	2) Implement application logic
+	3) External Interaction
+	
+	Naming convention-.service.ts
+  
+ 
+## Dependency Injection v-18:-
+1.Code without DI-drawbacks 
+2.DI as a design pattern 
+3.DI as a framework
+
+#-1 Code without DI-drawbacks :- 3 class- 1) class Engine{
+						constructor(){}
+						}
+						class Tires{
+						    constructor(){}
+						}
+					2) class Tires
+					3) class Car{
+						engine;
+						tires;
+						constructor()
+						{
+							this.engine = new Engine();
+							this.tires = new Tires();
+						}
+					}
+
+#-2 DI as a design pattern : -
+	
+- DI is a coding pattern in which a class receives its dependencies from external sources rather than creating them itself. 
+
+DI as a design pattern contd.
+	
+	*Ex-
+	var myEngine = new Engine();
+	var myTires = new Tires();
+	var myCar = new Car(myEngine, myTires);
+	
+	var myEngine = new Engine(parameter);
+	var myTires = new Tires();
+	var myCar = new Car(myEngine, myTires);
+	
+	var myEngine = new Engine(parameter);
+	var myTires = new Tires(parameter);
+	var myCar = new Car(myEngine, myTires);
+	
+	*Ex-
+	var oldEngine = new Engine(oldparameter);
+	var oldTires = new Tires(oldparameter);
+	var oldCar = new Car(oldEngine, oldTires);
+	
+	var newEngine = new Engine(newparameter);
+	var newTires = new Tires(newparameter);
+	var newCar = new Car(newEngine, newTires);
+	
+	*Ex-
+	var myEngine = new Engine();
+	var myTires = new Tires();
+	var depA = new dependency();
+	var depB = new dependency();
+	var depZ = new dependency();
+	var myCar = new Car(myEngine, myTires, depA, depB, depZ);
+	
+	
+	var myEngine = new Engine();
+	var myTires = new Tires();
+	var depA = new dependency();
+	var depB = new dependency();
+	var depZ = new dependency(depAB);
+	var myCar = new Car(myEngine, myTires, depA, depB, depZ);
+	
+	
+	
+#-3 DI as a framework:-
+	
+	Injector
+	
+	Engine			ServiceA
+	Tires			ServiceB
+	DepA			ServiceC
+	DepB			..
+	..			..
+	..			..
+	..			..
+	DepZ			ServiceZ
+	
+	
+	CAR			EmpList
+	
+#DI as a framework contd
+
+1)Define the EmployeeService class
+2)Register with Injector
+3)Declare as dependency in Emplist and EmpDetail
+
+
+			EmployeeService	          Injector
+				|
+		1.EmpList		2.EmpDetail
+ 
+ 
+
 # Services
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
