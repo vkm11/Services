@@ -1,3 +1,14 @@
+## How to create servicesL:-
+* create one folder (service) and inside service folder we can create services
+* ex: Service(folder)
+* userdata.component.ts
+- ng g service service/userdata
+
+## component installing:-
+- ng g c footer
+
+
+
 ## PRINCIPLES:-
 -Do not repeat yourself(DRY)
 -single Responsibility principle
