@@ -1,4 +1,4 @@
-## How to create servicesL:-
+## How to create services:-
 * create one folder (service) and inside service folder we can create services
 * ex: Service(folder)
 * userdata.component.ts
